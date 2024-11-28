@@ -37,7 +37,7 @@ public class StringsExample {
     String d = b.toUpperCase();
     System.out.println("toUpperCase: " + d);
 
-    boolean e = d.contains("W")
+    boolean e = d.contains("W");
     System.out.println("contains: " + e);
   }
 }
@@ -55,4 +55,5 @@ trim: Hello
 concat: HelloWorld
 toLowerCase: helloworld
 toUpperCase: HELLOWORLD
+contains: true
 ```
