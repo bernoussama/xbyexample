@@ -50,7 +50,9 @@ public class StringsExample {
  java StringsExample
 ```
 
-```
+- output
+
+```text
 trim: Hello
 concat: HelloWorld
 toLowerCase: helloworld

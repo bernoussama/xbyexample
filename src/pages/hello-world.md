@@ -43,3 +43,9 @@ public class HelloWorld {
 ```bash
 java HelloWorld.java # compile and run
 ```
+
+- output
+
+```text
+Hello, World!
+```

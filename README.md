@@ -43,6 +43,14 @@ All commands are run from the root of the project, from a terminal:
 I would love your help! Contribute by forking the repo and opening pull requests.
 All pull requests should be submitted to the main branch.
 
+#### How to Contribute
+
+- Fork the repo
+- Clone your fork locally
+- install dependencies(make sure you have node installed)
+- Add an Example
+  - to add an example, run `npm run add <example-name>`, a script will generate a markdown named `<example-name>.md` in the `src/pages`, containing a boilerplate to add your example.
+
 ## 👀 Acknowledgment
 
 - [Go by Example](https://gobyexample.com)

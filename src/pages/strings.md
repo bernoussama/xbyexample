@@ -51,7 +51,9 @@ public class StringsExample {
  java StringsExample
 ```
 
-```
+- output
+
+```text
 helloworld
 length: 12
 ```
