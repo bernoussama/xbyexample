@@ -1,9 +1,10 @@
 ---
 interface Props {
 	title: string;
+  description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 const newTitle = title == "" ? "Java by Example": "Java by Example: " + title
 import '../styles/global.css';
 import '../styles/pico.min.css';
@@ -13,7 +14,7 @@ import '../styles/pico.min.css';
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+    <meta name="description" content={description != "" && description != undefined ? description : newTitle} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="color-scheme" content="light dark">

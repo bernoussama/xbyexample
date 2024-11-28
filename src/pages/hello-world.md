@@ -1,11 +1,11 @@
 ---
 layout: ../layouts/MdLayout.astro
 title: Hello World
-author: Astro Learner
-description: ""
+author: Oussama Bernou
+description: "Java Hello World"
 image:
-  url: "https://docs.astro.build/default-og-image.png"
-  alt: "The word astro against an illustration of planets and stars."
+  url: "https://www.oracle.com/a/ocom/img/social-og-java-logo-1200x628.jpg"
+  alt: "ORACLE Java illustration"
 pubDate: 2024-11-27
 tags: ["java", "hello world"]
 ---
@@ -15,13 +15,8 @@ tags: ["java", "hello world"]
 Our first program will print the classic “hello world” message. Here’s the full source code.
 
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 
-To run the program compile using `javac` command and run the compiled class using `java` command
+To run the program compile using `javac` command and run the compiled class using `java` command.
 
 </div>
 
@@ -30,6 +25,7 @@ To run the program compile using `javac` command and run the compiled class usin
 ```java
 public class HelloWorld {
   public static void main(String[] args) {
+      // print line to stdout
       System.out.println("Hello, World!");
   }
 }
@@ -38,12 +34,12 @@ public class HelloWorld {
 - compile and run
 
 ```bash
- javac HelloWorld.java
- java HelloWorld
+ javac HelloWorld.java # compile
+ java HelloWorld # run
 ```
 
 - or run directly
 
 ```bash
-java HelloWorld.java
+java HelloWorld.java # compile and run
 ```
