@@ -18,8 +18,8 @@ tags: ["java"]
 
 - Some methods such as `substring`, `indexOf`, `charAt` are identical to that of String class
 - Extra methods are available: `append`, `insert`, `delete`, `reverse`.
-
-It is useful when the fully constructed String is not required until the end of some processing
+- Sequence of chars must be continuous, it may not have gaps of no characters at all.
+  It is useful when the fully constructed String is not required until the end of some processing
 
 </div>
 
