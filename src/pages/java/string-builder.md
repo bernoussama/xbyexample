@@ -16,7 +16,10 @@ tags: ["java"]
 
 > ⚠️ `StringBuilder` is not a `String`
 
-it is useful when the fully constructed String is not required until the end of some processing
+- Some methods such as `substring`, `indexOf`, `charAt` are identical to that of String class
+- Extra methods are available: `append`, `insert`, `delete`, `reverse`.
+
+It is useful when the fully constructed String is not required until the end of some processing
 
 </div>
 
@@ -30,14 +33,21 @@ public class StringBuilderEx {
     System.out.println("initial capacity: " + stringB.capacity());
     System.out.println("initial length: " + stringB.length());
     // concatenate to a string builder instance
-    stringB.append("this is a ");
+    stringB.append("this is a");
     stringB.append("StringBuilder instance");
+
+    // delete one char at idx 0
+    stringB.delete(0,1);
+
+    // insert char "T" at idx 0
+    stringB.insert(0,"T");
+    stringB.insert(9," ");
     System.out.println("capacity: " + stringB.capacity());
     System.out.println("length: " + stringB.length());
 
     // turn StringBuilder instance to a String
-    String realString = stringB.toString()
-    System.out.println(realString)
+    String realString = stringB.reverse().toString();
+    System.out.println(realString);
   }
 }
 ```
@@ -54,7 +64,7 @@ initial capacity: 16
 initial length: 0
 capacity: 34
 length: 32
-this is a StringBuilder instance
+ecnatsni redliuBgnirtS a si sihT
 ```
 
 </div>
