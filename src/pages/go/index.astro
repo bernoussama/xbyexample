@@ -1,0 +1,13 @@
+---
+import Layout from '@layouts/Layout.astro';
+
+const path = Astro.url.pathname
+import {capitalize} from '@/utils'
+
+---
+
+<Layout title={capitalize(path.substring(path.lastIndexOf("/")+1))} description=''>
+<meta http-equiv="refresh" content="0;url=https://gobyexample.com" />
+</Layout>
+
+

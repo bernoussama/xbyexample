@@ -1,20 +1,17 @@
 ---
 const {frontmatter} = Astro.props;
-import Layout from './Layout.astro';
-import '../styles/global.css';
+import Layout from '@layouts/Layout.astro';
+import '@/styles/global.css';
+const url = Astro.url
 
+import {capitalize} from '@/utils'
 ---
 
-<Layout title={frontmatter.title} description={frontmatter.description}>
-  <!-- <p class="description"> -->
-  <!--   {frontmatter.description} -->
-  <!-- </p> -->
-  <article id="article">
-<div class="grid">
-		<slot />
-</div>
-    <div>
 
+<Layout title={capitalize(`${url.pathname.split("/")[1]} | ${frontmatter.title}`)} description={frontmatter.description}>
+  <article id="article">
+    <div class="grid">
+        <slot />
     </div>
   </article>
 

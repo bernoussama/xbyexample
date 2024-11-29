@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/MdLayout.astro
+layout: "@layouts/MdLayout.astro"
 title: Hello World
 author: Oussama Bernou
 description: "Java Hello World"
@@ -12,7 +12,7 @@ tags: ["java", "hello world"]
 
 <div class="example-body">
 
-Our first program will print the classic “hello world” message. Here’s the full source code.
+Our first program obviously will print the classic “hello world” message. Here’s the full source code.
 
 <br/>
 
@@ -24,6 +24,7 @@ To run the program compile using `javac` command and run the compiled class usin
 
 ```java
 public class HelloWorld {
+  // to run a Java program it should have a main method
   public static void main(String[] args) {
       // print line to stdout
       System.out.println("Hello, World!");

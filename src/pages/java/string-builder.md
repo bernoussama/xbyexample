@@ -1,0 +1,60 @@
+---
+layout: "@layouts/MdLayout.astro"
+title: StringBuilder
+author: Oussama Bernou
+description: "Java String Builder class"
+image:
+  url: "https://www.oracle.com/a/ocom/img/social-og-java-logo-1200x628.jpg"
+  alt: "ORACLE Java illustration"
+pubDate: 2024-11-28
+tags: ["java"]
+---
+
+<div class="example-body">
+
+`StringBuilder` is a class that let you build strings without having to create intermediate strings because of the immutable nature of `String`
+
+> ⚠️ `StringBuilder` is not a `String`
+
+it is useful when the fully constructed String is not required until the end of some processing
+
+</div>
+
+<div class="example-snippet">
+
+```java
+public class StringBuilderEx {
+  public static void main(String[] args) {
+    // create a StringBuilder instance
+    StringBuilder stringB = new StringBuilder();
+    System.out.println("initial capacity: " + stringB.capacity());
+    System.out.println("initial length: " + stringB.length());
+    // concatenate to a string builder instance
+    stringB.append("this is a ");
+    stringB.append("StringBuilder instance");
+    System.out.println("capacity: " + stringB.capacity());
+    System.out.println("length: " + stringB.length());
+
+    // turn StringBuilder instance to a String
+    String realString = stringB.toString()
+    System.out.println(realString)
+  }
+}
+```
+
+```bash
+javac StringBuilderEx.java # compile
+java StringBuilderEx # run
+```
+
+- output:
+
+```text
+initial capacity: 16
+initial length: 0
+capacity: 34
+length: 32
+this is a StringBuilder instance
+```
+
+</div>

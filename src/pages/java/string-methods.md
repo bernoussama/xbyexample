@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/MdLayout.astro
+layout: "@layouts/MdLayout.astro"
 title: String Mehods/Operations
 author: Oussama Bernou
 description: "Java String Methods / Operations"
@@ -58,14 +58,12 @@ public class StringsExample {
 }
 ```
 
-- compile and run
-
 ```bash
  javac StringsMethods.java
  java StringsMethods
 ```
 
-- output
+- output:
 
 ```text
 trim: Hello

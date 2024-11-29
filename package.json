@@ -8,9 +8,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "add": "node utils/add.js"
+    "add": "node utils/cli.js"
   },
   "dependencies": {
-    "astro": "^4.16.16"
+    "astro": "^4.16.16",
+    "commander": "^12.1.0"
   }
 }

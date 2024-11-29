@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/MdLayout.astro
+layout: "@layouts/MdLayout.astro"
 title: Strings
 author: Oussama Bernou
 description: "Java Strings"
@@ -43,8 +43,6 @@ public class StringsExample {
   }
 }
 ```
-
-- compile and run
 
 ```bash
  javac StringsExample.java

@@ -4,10 +4,12 @@ interface Props {
   description: string;
 }
 
+import {capitalize} from '@/utils'
 const { title, description } = Astro.props;
-const newTitle = title == "" ? "Java by Example": "Java by Example: " + title
-import '../styles/global.css';
-import '../styles/pico.min.css';
+const newTitle = title == "" ? "X by Example": "X by Example | " + capitalize(title)
+import '@/styles/pico.min.css';
+import '@/styles/global.css';
+
 ---
 
 <!doctype html>
@@ -56,7 +58,7 @@ import '../styles/pico.min.css';
       <small
       >By <a href="https://bernoussama.com" target="_blank"
         >Oussama Bernou</a> •
-        <a href="https://github.com/bernoussama/javabyexample" target="_blank"
+        <a href="https://github.com/bernoussama/xbyexample" target="_blank"
           >Source</a> •
         Hosted on <a  href="https://pages.cloudflare.com" target="_blank"
         >Cloudflare Pages</a>

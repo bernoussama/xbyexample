@@ -1,0 +1,23 @@
+---
+import Layout from '@layouts/Layout.astro';
+const allExamples = await Astro.glob('./*.md');
+
+const path = Astro.url.pathname
+import {capitalize} from '@/utils'
+
+---
+
+<Layout title={capitalize(path.substring(path.lastIndexOf("/")+1))} description=''>
+  <main>
+    <hgroup>
+      <p>Java is the #1 programming language and development platform. It reduces costs, shortens development timeframes, drives innovation, and improves application services. With millions of developers running more than 60 billion Java Virtual Machines worldwide, Java continues to be the development platform of choice for enterprises and developers. Please read the official <a href="https://dev.java/learn/getting-started/">documentation</a> to learn a bit about Java code, tools and libraries.  </p>
+    </hgroup>
+<br/>
+    <ul>
+    {allExamples.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+
+    </ul>
+  </main>
+</Layout>
+
+
