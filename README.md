@@ -39,12 +39,12 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-### 👏 Contributing
+## 👏 Contributing
 
 I would love your help! Contribute by forking the repo and opening pull requests.
 All pull requests should be submitted to the main branch.
 
-#### How to Contribute
+### How to Contribute
 
 - Fork the repo
 - Clone your fork locally
@@ -52,10 +52,17 @@ All pull requests should be submitted to the main branch.
 - Add an Example
   - to add an example, run `npm run add -l <language> <example-name>`, a script will generate a markdown named `<example-name>.md` in the `src/pages/<language>`, containing a boilerplate to add your example.
 
-## 👀 Acknowledgment
+## License
+
+> This project is [MIT][license] licensed
+> The examples are licensed under [CreativeCommons by 3.0 ][ccby3.0]
+
+## 👀 Acknowledgments
 
 - Thanks [Go by Example][gobyexample] for inspiring this project.
 - Made with [Astro][astro]
 
 [astro]: https://astro.build
 [gobyexample]: https://gobyexample.com
+[ccby3.0]: https://creativecommons.org/licenses/by/3.0/
+[license]: /LICENSE
