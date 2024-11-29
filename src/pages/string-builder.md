@@ -1,8 +1,8 @@
 ---
 layout: ../layouts/MdLayout.astro
-title: <title here>
-author: <your name>
-description: "enter description here"
+title: StringBuilder
+author: Oussama Bernou
+description: "Java String Builder class"
 image:
   url: "https://www.oracle.com/a/ocom/img/social-og-java-logo-1200x628.jpg"
   alt: "ORACLE Java illustration"

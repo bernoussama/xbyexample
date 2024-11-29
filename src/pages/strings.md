@@ -18,7 +18,7 @@ A Java `String` is a class `java.lang.String` that represents an **immutable** s
 
 the JVM(Java Virtual Machine) can optimize memory allocated by maintaining a single copy of each String literal in the **String Pool** memory area.
 
-> ⚠️ **a `String` instantiated using the `new` keyword are not interned**
+> ⚠️ **a `String` instantiated using the `new` keyword is not interned**
 
 </div>
 
