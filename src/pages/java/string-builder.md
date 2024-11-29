@@ -10,8 +10,7 @@ pubDate: 2024-11-28
 tags: ["java"]
 ---
 
-<div class="example-body">
-
+<div class="example-body"></div>
 `StringBuilder` is a class that let you build strings without having to create intermediate strings because of the immutable nature of `String`
 
 > ⚠️ `StringBuilder` is not a `String`

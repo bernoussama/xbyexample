@@ -4,9 +4,9 @@ A [Website](https://xbyexample.dev) that serve as a reference for programming la
 
 ## Motivation
 
-i'm a huge fan of , it was great reference when building Go projects.As i was learning Java i felt the need for something like it, not only for java but for every programming language, so obviously i had to build it, and here we are.
+I have a lot of unorganised notes of programming languages and i needed somewhere to put them, so i built this website to organise my notes, keep them as a reference and share them with the community.
 
-I decided to go with Astro because of markdown support it's the best, i write examples in markdown and Astro generate the html, that's all i needed.
+I decided to go with [Astro][astro] because of markdown support, i write examples in markdown and Astro generate the static HTML, that's all i needed.
 
 ## 🚀 Project Structure
 
@@ -55,6 +55,7 @@ All pull requests should be submitted to the main branch.
 ## License
 
 > This project is [MIT][license] licensed
+
 > The examples are licensed under [CreativeCommons by 3.0 ][ccby3.0]
 
 ## 👀 Acknowledgments
