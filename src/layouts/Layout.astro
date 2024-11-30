@@ -2,10 +2,11 @@
 interface Props {
 	title: string;
   description: string;
+  redirect: string;
 }
 
 import {capitalize} from '@/utils'
-const { title, description } = Astro.props;
+const { title, description, redirect } = Astro.props;
 const newTitle = title == "" ? "X by Example": "X by Example | " + capitalize(title)
 import '@/styles/pico.min.css';
 import '@/styles/global.css';
@@ -16,6 +17,13 @@ import '@/styles/global.css';
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+    <!-- redirects -->
+    {redirect ? (
+      <meta 
+        http-equiv="refresh" 
+        content={ `0; url=${ redirect }` } 
+      />
+    ) : null}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content={description != "" && description != undefined ? description : newTitle} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
