@@ -13,7 +13,7 @@ import { capitalize } from '@/utils';
 <br/>
     <ul>
     {allRoutes.map((route) => (
-      <li><a href={route.url}>{capitalize(route.url.substring(1))}</a></li>
+      <li><a href={route.url}>{route.url.substring(1) != "go" ? capitalize(route.url.substring(1)): "Golang"}</a></li>
     ))}
     </ul>
   </main>
