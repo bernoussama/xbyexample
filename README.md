@@ -56,7 +56,7 @@ All pull requests should be submitted to the main branch.
 
 > This project is [MIT][license] licensed
 
-> The examples are licensed under [CreativeCommons by 3.0 ][ccby3.0]
+> The examples are licensed under [CreativeCommons][ccby4.0]
 
 ## 👀 Acknowledgments
 
@@ -66,5 +66,5 @@ All pull requests should be submitted to the main branch.
 [site]: https://xbyexample.dev
 [astro]: https://astro.build
 [gobyexample]: https://gobyexample.com
-[ccby3.0]: https://creativecommons.org/licenses/by/3.0/
+[ccby4.0]: https://creativecommons.org/licenses/by/4.0/
 [license]: /LICENSE
