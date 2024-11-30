@@ -13,7 +13,7 @@ jobs:
       - name: Build & Deploy to Pages
         uses: cloudflare/wrangler-action@v3
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          apiToken: ${{ secrets.CF_API_TOKEN }}
           preCommands: npm run build
           # wranglerVersion: "3.75.0"
           command: pages deploy dist --project-name=xbyexample-w

@@ -18,7 +18,7 @@ pages_build_output_dir = "dist"
 # - https://developers.cloudflare.com/pages/functions/bindings/#secrets
 [vars]
 # MY_VARIABLE = "production_value"
-NODE_VERSION = ">=21.1.0"
+NODE_VERSION = ">=22.11.0"
 
 # Bind the Workers AI model catalog. Run machine learning models, powered by serverless GPUs, on Cloudflare’s global network
 # Docs: https://developers.cloudflare.com/pages/functions/bindings/#workers-ai
@@ -71,7 +71,7 @@ NODE_VERSION = ">=21.1.0"
 ######## PREVIEW environment config ########
 
 [env.preview.vars]
-NODE_VERSION = ">=21.1.0"
+NODE_VERSION = ">=22.11.0"
 
 # [[env.preview.kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
@@ -80,7 +80,7 @@ NODE_VERSION = ">=21.1.0"
 ######## PRODUCTION environment config ########
 
 [env.production.vars]
-NODE_VERSION = ">=21.1.0"
+NODE_VERSION = ">=22.11.0"
 
 # [[env.production.kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
