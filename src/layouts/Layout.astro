@@ -7,7 +7,8 @@ interface Props {
 
 import {capitalize} from '@/utils'
 const { title, description, redirect } = Astro.props;
-const newTitle = title == "" ? "X by Example": "X by Example | " + capitalize(title)
+const newTitle = title == "" ? " by Example": " by Example | " + capitalize(title)
+const titleTag = "X" + newTitle
 import '@/styles/pico.min.css';
 import '@/styles/global.css';
 
@@ -16,70 +17,96 @@ import '@/styles/global.css';
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-    <!-- redirects -->
-    {redirect ? (
-      <meta 
-        http-equiv="refresh" 
-        content={ `0; url=${ redirect }` } 
-      />
-    ) : null}
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content={description != "" && description != undefined ? description : newTitle} />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="color-scheme" content="light dark">
-		<meta name="generator" content={Astro.generator} />
-    <title>{newTitle}</title>
-	</head>
-	<body>
-    <!-- Header -->
-    <header class="container">
-      <nav>
-        <ul>
-          <li>
-              <h1><a href="/" class="contrast">{newTitle}</a></h1>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <details class="dropdown">
-              <summary role="button" class="secondary">Theme</summary>
-              <ul>
-                <li><a href="#" data-theme-switcher="auto">Auto</a></li>
-                <li><a href="#" data-theme-switcher="light">Light</a></li>
-                <li><a href="#" data-theme-switcher="dark">Dark</a></li>
-              </ul>
-            </details>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <!-- ./ Header -->
+      <meta charset="UTF-8" />
+      <!-- redirects -->
+      {redirect ? (
+        <meta 
+          http-equiv="refresh" 
+          content={ `0; url=${ redirect }` } 
+        />
+      ) : null}
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="description" content={description != "" && description != undefined ? description : titleTag} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <meta name="color-scheme" content="light dark">
+      <meta name="generator" content={Astro.generator} />
+      <title>{titleTag}</title>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const logo = document.querySelector('img#logo');
+          const updateFavicon = () => {
+            const theme = document.documentElement.getAttribute('data-theme');
+            if (theme === 'dark') {
+              logo.src = '/favicon.png';
+            } else {
+              logo.src = '/logo-light.png';
+            }
+          };
+      
+          // Initial update
+          updateFavicon();
+      
+          // Update on theme change
+          const observer = new MutationObserver(updateFavicon);
+          observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+        });
+      </script>
+		</head>
+    <body>
+      <!-- Header -->
+      <header class="container">
+        <nav>
+          <ul>
+            <li>
+              <div  style="justify-content: center; align-items: center; display: flex;">
+              <picture>
+                <img id="logo" src="/favicon.png" alt="X by Example logo" width="64px">
+              </picture>
+                  <h1 style="margin: 0;">
+                <a href="/" class="contrast">{newTitle}</a></h1>
+              </div>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <details class="dropdown">
+                <summary role="button" class="secondary">Theme</summary>
+                <ul>
+                  <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+                  <li><a href="#" data-theme-switcher="light">Light</a></li>
+                  <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- ./ Header -->
 
-    <div class="container">
-      <slot />
-    </div>
+      <div class="container">
+        <slot />
+      </div>
 
-    <!-- Footer -->
-    <footer class="container">
-      <small
-      >By 
-        <a href="https://bernoussama.com" target="_blank"
-        >Oussama Bernou</a> using
-        <a href="https://astro.build" target="_blank"
-        >Astro</a> •
-        <a href="https://github.com/bernoussama/xbyexample" target="_blank"
-          >Source</a> •
-        Hosted on <a  href="https://pages.cloudflare.com" target="_blank"
-        >Cloudflare Pages</a>
-      </small>
-    </footer>
-    <!-- ./ Footer -->
+      <!-- Footer -->
+      <footer class="container">
+        <small
+        >By 
+          <a href="https://bernoussama.com" target="_blank"
+          >Oussama Bernou</a> using
+          <a href="https://astro.build" target="_blank"
+          >Astro</a> •
+          <a href="https://github.com/bernoussama/xbyexample" target="_blank"
+            >Source</a> •
+          Hosted on <a  href="https://pages.cloudflare.com" target="_blank"
+          >Cloudflare Pages</a>
+        </small>
+      </footer>
+      <!-- ./ Footer -->
 
-    <!-- Minimal theme switcher -->
-    <script >
-      import "../scripts/minimal-theme-switcher.js"
-    </script>
-	</body>
+      <!-- Minimal theme switcher -->
+      <script >
+        import "../scripts/minimal-theme-switcher.js"
+      </script>
+    </body>
 </html>
