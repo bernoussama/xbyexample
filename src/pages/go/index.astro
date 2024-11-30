@@ -1,11 +1,10 @@
 ---
 import Layout from '@layouts/Layout.astro';
-const path = Astro.url.pathname
 import {capitalize} from '@/utils'
 
 ---
 
-<Layout title={capitalize(path.substring(path.lastIndexOf("/")+1))} description='gobyexample'>
+<Layout title={capitalize("gobyexample"} description='gobyexample'>
   <p>Redirecting to <a href="https://gobyexample.com">gobyexample.com</a> after 1s...</p>
 <meta http-equiv="refresh" content="1;url=https://gobyexample.com" />
 </Layout>
