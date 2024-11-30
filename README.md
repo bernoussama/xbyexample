@@ -1,4 +1,4 @@
-![Logo](/public/favicon.png) # by Example
+# ![Logo](/public/favicon.png) by Example
 
 [xbyexample.dev][site] is a website that serve as a reference for programming languages via annotated example programs.
 
