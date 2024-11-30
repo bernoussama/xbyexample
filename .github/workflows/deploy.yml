@@ -16,5 +16,5 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           preCommands: npm run build
           # wranglerVersion: "3.75.0"
-          command: pages deploy dist --project-name=xbyexample
+          command: pages deploy dist --project-name=xbyexample-w
           accountId: ${{ secrets.CF_ACC_ID }}
