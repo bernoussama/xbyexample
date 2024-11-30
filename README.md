@@ -1,6 +1,6 @@
 # X by Example
 
-A [Website](https://xbyexample.dev) that serve as a reference for programming languages via annotated example programs.
+[xbyexample.dev][site] is a website that serve as a reference for programming languages via annotated example programs.
 
 ## Motivation
 
@@ -63,6 +63,7 @@ All pull requests should be submitted to the main branch.
 - Thanks [Go by Example][gobyexample] for inspiring this project.
 - Made with [Astro][astro]
 
+[site]: https://xbyexample.dev
 [astro]: https://astro.build
 [gobyexample]: https://gobyexample.com
 [ccby3.0]: https://creativecommons.org/licenses/by/3.0/
