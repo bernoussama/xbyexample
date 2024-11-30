@@ -15,7 +15,7 @@ import {capitalize} from '@/utils'
 
 ---
 
-<Layout title={capitalize(path.substring(path.lastIndexOf("/")+1))} description=''>
+<Layout title={capitalize(path.split("/")[1])} description=''>
   <main>
     <hgroup>
 <p>
